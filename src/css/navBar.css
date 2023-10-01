@@ -1,4 +1,4 @@
-nav{
+#topBar{
     display: flex;
     height: 13vh;
     min-height: 50px;
@@ -7,10 +7,10 @@ nav{
     background: #fff;
     border-bottom: 1px solid #aaa;
 }
-#humberger{
+#topBar #humberger{
     display: none;
 }
-ul{
+#topBar ul{
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -20,10 +20,10 @@ ul{
     margin: 0;
     padding: 0;
 }
-li a:hover, #layout-3 a:hover, .clicked{
+#topBar li a:hover, #layout-3 a:hover, .clicked{
     border-bottom: #555 solid 1.8px;
 }
-a{
+#topBar a{
     font-family:'Lucida Sans Regular';
     color: black;
     font-weight: 300;
@@ -45,16 +45,16 @@ a{
     display: none;
 }
 @media(max-width:720px){
-    nav{
+    #topBar{
         width: 100%;
         align-items: center;
     }
-    #humberger{
+    #topBar #humberger{
         display: block;
         font-size: x-large;
         cursor: pointer;
     }
-    ul {
+    #topBar ul {
         display: flex;
         position: absolute;
         top: 50vh;
@@ -67,31 +67,31 @@ a{
         opacity: 0;
         overflow: hidden;
     }
-    .show{
+    #topBar .show{
         position:absolute;
         top: 13vh;
         opacity: 1;
         height: 87vh;
         transition: 0.5s;
     }
-    li a{
+    #topBar li a{
         margin-bottom: 10px;
         width: 50%;
     }
-    li:last-child{
+    #topBar li:last-child{
         margin-bottom: 30vh;
     }
-    li{
+    #topBar li{
         width: 100%;
         padding: 2vh 0;
         text-align: center;
     }
 }
 @media (max-width:500px){
-    #search-icon{
+    #topBar #search-icon{
         display: block;
     }
-    .hide-nav-items{
+    #topBar .hide-nav-items{
         display: none;
     }
 }

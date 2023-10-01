@@ -1,0 +1,23 @@
+#sideBar{
+    border-right: 1px #aaa solid;
+    min-width: 200px;
+}
+#sideBar ul{
+    list-style: none;
+    padding: 0;
+}
+#sideBar li{
+    margin-bottom: 10px;
+}
+#sideBar a{
+    font-family:'Lucida Sans Regular';
+    color: black;
+    font-weight: 300;
+    text-decoration: none;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+}
+#sideBar a:hover{
+    border-bottom: #555 solid 1px;
+}

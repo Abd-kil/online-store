@@ -1,31 +1,84 @@
 #home{
     background: #fff;
-    display: flex;
+    /* display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
 }
 
 .product{
     margin: 10px;
     padding: 10px;
-    min-width: 250px;
-    width: auto;
+    min-width: 200px;
+    width: fit-content;
     height: fit-content;
-    box-shadow: 1px 1px 15px #ddd;
-    border-radius: 10px;
     background: #fff;
-    text-align: center;
+    text-align: left;
 }
 
-.product button{
-    background: #15caaa;
-    padding: 8px 0;
+.product *{
+    margin: 5px 0;
+}
+
+.flex-section{
+    display: flex;
+    justify-content: start;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+.flex-section::-webkit-scrollbar{
+    display: none;
+}
+.images-container{
     width: 60%;
-    border: none;
-    border-radius: 5px;
 }
-
-.product button:hover{
-    background: #0ea088;
+section{
+    padding:40px;
+}
+.section-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+.title-half{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    align-items: end;
+}
+.time-left{
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    text-align: center;
+    width: 50%;
+    height: 50%;
+}
+.title-half h6 , .title-half h1 {
+    margin: 10px auto;
+}
+.time-left h2{
+    margin: 12px auto;
+    color: orange;
+}
+.section-title h5{
+    color: red;
+}
+.red-title{
+    display: flex;
+    align-items: center;
+}
+.red-title div{
+    height: 30px;
+    width: 15px;
+    margin-right: 20px;
+    border-radius: 4px;
+    background-color: red;
+}
+.section-title button{
+    margin: 10px 10px 10px 0;
+    padding: 5px;
+    font-size: large;
+    border: none;
+    border-radius: 100%;
     cursor: pointer;
 }

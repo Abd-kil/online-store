@@ -17,7 +17,7 @@ function NavBar(){
     const currentPage = location.pathname;
     return(
         <>
-            <nav>
+            <nav id="topBar">
                 <i className="bx bx-menu" onClick={ToggleNav} id="humberger"/>
                 <Link to='/'><h2 className={isSearchVisible?'hide-nav-items':''}>Execlusive</h2></Link>
                 <ul id="ulNav" className={isNavVisible?'show':''}>
