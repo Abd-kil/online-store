@@ -1,0 +1,18 @@
+.search-container{
+    display: flex;
+    align-items: center;
+    background:#f5f5f5;
+    padding:7px 12px 7px 20px;
+    border-radius:4px;
+    transition: 0.3s;
+}
+.search-input{
+    outline: none;
+    border: none;
+    background-color:transparent;
+}
+@media (max-width:500px){
+    .show-search{
+        display: none;
+    }
+}

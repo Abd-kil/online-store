@@ -1,0 +1,31 @@
+#home{
+    background: #eee;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product{
+    margin: 10px;
+    padding: 10px;
+    min-width: 250px;
+    width: auto;
+    height: fit-content;
+    box-shadow: 1px 1px 15px #ddd;
+    border-radius: 10px;
+    background: #fff;
+    text-align: center;
+}
+
+.product button{
+    background: #15caaa;
+    padding: 8px 0;
+    width: 60%;
+    border: none;
+    border-radius: 5px;
+}
+
+.product button:hover{
+    background: #0ea088;
+    cursor: pointer;
+}
