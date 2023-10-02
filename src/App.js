@@ -9,8 +9,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<NavBar/>}>
-          <Route exact path='/' element={<Home/>}/>
+        <Route path='/' element={<NavBar/>}>
+          <Route index element={<Home/>}/>
           <Route path="/cart" element={<Cart/>}/>
           <Route path="/contact" element={<Contact/>}/>
           <Route path="*" element={<NoPage/>}/>

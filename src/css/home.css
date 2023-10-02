@@ -82,3 +82,11 @@ section{
     border-radius: 100%;
     cursor: pointer;
 }
+.red-button{
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    width: 150px;
+    height: 30px;
+}

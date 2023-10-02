@@ -65,7 +65,9 @@ function Home(){
                 <div className="flex-section" ref={todayProductsRef}>
                     {content}
                 </div>
-                <button>View All</button>
+                <div style={{width:'100%',display:'flex',justifyContent:'center'}}>  
+                    <button className="red-button">View All</button>
+                </div>
             </section>
             
         </div>
