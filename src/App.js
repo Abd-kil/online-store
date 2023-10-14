@@ -11,8 +11,8 @@ function App() {
       <Routes>
         <Route path='/' element={<NavBar/>}>
           <Route index element={<Home/>}/>
-          <Route path="./cart" element={<Cart/>}/>
-          <Route path="./contact" element={<Contact/>}/>
+          <Route path="/cart" element={<Cart/>}/>
+          <Route path="/contact" element={<Contact/>}/>
           <Route path="*" element={<NoPage/>}/>
         </Route>
       </Routes>
