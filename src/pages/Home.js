@@ -31,9 +31,13 @@ function Home(){
                     <button className="red-button">View All</button>
                 </div>
             }
+            scrollable
             />
-            <hr style={{width:"75%"}}/>
-            
+            <hr style={{width:"80%"}}/>
+            <ProductsSection
+            redTitle="Categories"
+            title="Brows By Category"
+            />
         </div>
     );
 }

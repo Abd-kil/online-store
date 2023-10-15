@@ -2,9 +2,10 @@ import '../css/productsSection.css';
 import { useEffect, useRef, useState } from 'react';
 function ProductsSection(props){
     const todayProductsRef = useRef(null);
-    const scrollTodayProducts = (scrollOfset)=>{
+    const scrollTodayProducts = (dir)=>{
+        const offset = window.innerWidth / 1.5;
         if(todayProductsRef.current)
-        todayProductsRef.current.scrollLeft += scrollOfset;
+        todayProductsRef.current.scrollLeft += (dir=="right" ? offset : -offset);
     }
     // Define the state for the time remaining.
     const [timeRemaining, setTimeRemaining] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
@@ -36,7 +37,9 @@ function ProductsSection(props){
         clearInterval(timer);
         };
     }, [props.time]); // Re-run the effect when the props.time changes.
-
+    const timerFormat = (number)=>{
+        return number < 10 ? ('0' + number): number; 
+    }
     return(
         <section>
         <div className="section-title">
@@ -53,31 +56,33 @@ function ProductsSection(props){
                     (<div className="time-left">
                         <div>
                             <h6>Days</h6>
-                            <h2>{timeRemaining.days}</h2>
+                            <h2>{timerFormat(timeRemaining.days)}</h2>
                         </div>
                         <h3>:</h3>
                         <div>
                             <h6>Hours</h6>
-                            <h2>{timeRemaining.hours}</h2>
+                            <h2>{timerFormat(timeRemaining.hours)}</h2>
                         </div>
                         <h3>:</h3>
                         <div>
                             <h6>Minutes</h6>
-                            <h2>{timeRemaining.minutes}</h2>
+                            <h2>{timerFormat(timeRemaining.minutes)}</h2>
                         </div>
                         <h3>:</h3>
                         <div>
                             <h6>Seconds</h6>
-                            <h2>{timeRemaining.seconds}</h2>
+                            <h2>{timerFormat(timeRemaining.seconds)}</h2>
                         </div>
                     </div>):null
                 }
             </div>
-            
-            <div>
-                <button className="bx bx-left-arrow-alt" onClick={()=>scrollTodayProducts(-500)}></button>
-                <button className="bx bx-right-arrow-alt" onClick={()=>scrollTodayProducts(500)}></button>
-            </div>
+            {
+            props.scrollable ?
+            (<div className="arrows-box">
+                <button className="bx bx-left-arrow-alt" onClick={()=>scrollTodayProducts("left")}></button>
+                <button className="bx bx-right-arrow-alt" onClick={()=>scrollTodayProducts("right")}></button>
+            </div>) : null
+            }
         </div>
         <div className="flex-section" ref={todayProductsRef}>
             {props.content}
