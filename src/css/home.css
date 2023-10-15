@@ -34,59 +34,9 @@
 section{
     padding:40px;
 }
-.section-title{
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-}
-.title-half{
-    display: flex;
-    width: 50%;
-    justify-content: space-between;
-    align-items: end;
-}
-.time-left{
-    display: flex;
-    align-items: end;
-    justify-content: space-between;
-    text-align: center;
-    width: 50%;
-    height: 50%;
-}
-.title-half h6 , .title-half h1 {
-    margin: 10px auto;
-}
-.time-left h2{
-    margin: 12px auto;
-    color: orange;
-}
-.section-title h5{
-    color: red;
-}
-.red-title{
-    display: flex;
-    align-items: center;
-}
-.red-title div{
-    height: 30px;
-    width: 15px;
-    margin-right: 20px;
-    border-radius: 4px;
-    background-color: red;
-}
-.section-title button{
-    margin: 10px 10px 10px 0;
-    padding: 5px;
-    font-size: large;
-    border: none;
-    border-radius: 100%;
-    cursor: pointer;
-}
-.red-button{
-    background-color: red;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    width: 150px;
-    height: 30px;
+
+@media (max-width:500px) {
+    section{
+        padding:20px;
+    }
 }

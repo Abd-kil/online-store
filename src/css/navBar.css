@@ -37,6 +37,7 @@
     width: max-content;
 }
 #layout-3 > *:not(:first-child){
+    padding: 0;
     font-size: x-large;
     cursor: pointer;
     margin-left: 10px;
