@@ -6,7 +6,7 @@ function ProductsSection(props){
     const scrollTodayProducts = (dir)=>{
         const offset = window.innerWidth / 1.5;
         if(todayProductsRef.current)
-        todayProductsRef.current.scrollLeft += (dir=="right" ? offset : -offset);
+        todayProductsRef.current.scrollLeft += (dir==="right" ? offset : -offset);
     }
     
     return(

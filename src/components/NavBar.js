@@ -1,4 +1,4 @@
-import { Link, Outlet, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import '../css/navBar.css'
 import { useState } from "react";
 import SearchBar from "./SearchBar";
@@ -42,7 +42,6 @@ function NavBar(){
                     <Link to='/cart' className={currentPage==='/cart'?'clicked':''}><i className={(isSearchVisible?'hide-nav-items ':'') + 'bx bx-cart-alt'}/></Link>
                 </div>
             </nav>
-            <Outlet/>
         </>
     )
 }

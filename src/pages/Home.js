@@ -4,6 +4,12 @@ import '../css/home.css';
 import ProductsSection from "../components/ProductsSection";
 import { useRef } from "react";
 import Offer from "../components/Offer";
+import Camera from "../images/Category-Camera.png";
+import CellPhone from "../images/Category-CellPhone.png";
+import Computer from "../images/Category-Computer.png";
+import Gamepad from "../images/Category-Gamepad.png";
+import Headphone from "../images/Category-Headphone.png";
+import SmartWatch from "../images/Category-SmartWatch.png";
 function Home(){
     const content = [];
     for(let i=0;i<20;i++){
@@ -13,32 +19,32 @@ function Home(){
         {
             name:"phones",
             icone:"bx bx-mobile-alt",
-            image:"images/Category-CellPhone.png"
+            image:CellPhone
         },
         {
             name:"computers",
             icone:"bx bx-desktop",
-            image:"images/Category-Computer.png"
+            image:Computer
         },
         {
             name:"smartWatch",
             icone:"bx bxs-watch-alt",
-            image:"images/Category-SmartWatch.png"
+            image:SmartWatch
         },
         {
             name:"camera",
             icone:"bx bx-camera",
-            image:"images/Category-Camera.png"
+            image:Camera
         },
         {
             name:"headPhones",
             icone:"bx bx-headphone",
-            image:"images/Category-Headphone.png"
+            image:Headphone
         },
         {
             name:"gaming",
             icone:"bx bx-joystick-alt",
-            image:"images/Category-Gamepad.png"
+            image:Gamepad
         },
         
     ]
