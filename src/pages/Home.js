@@ -3,7 +3,6 @@ import Product from "../components/Product";
 import '../css/home.css';
 import ProductsSection from "../components/ProductsSection";
 import { useRef } from "react";
-import Timer from "../components/Timer";
 import Offer from "../components/Offer";
 function Home(){
     const content = [];
@@ -14,32 +13,32 @@ function Home(){
         {
             name:"phones",
             icone:"bx bx-mobile-alt",
-            image:"./images/Category-CellPhone.png"
+            image:"images/Category-CellPhone.png"
         },
         {
             name:"computers",
             icone:"bx bx-desktop",
-            image:"./images/Category-Computer.png"
+            image:"images/Category-Computer.png"
         },
         {
             name:"smartWatch",
             icone:"bx bxs-watch-alt",
-            image:"./images/Category-SmartWatch.png"
+            image:"images/Category-SmartWatch.png"
         },
         {
             name:"camera",
             icone:"bx bx-camera",
-            image:"./images/Category-Camera.png"
+            image:"images/Category-Camera.png"
         },
         {
             name:"headPhones",
             icone:"bx bx-headphone",
-            image:"./images/Category-Headphone.png"
+            image:"images/Category-Headphone.png"
         },
         {
             name:"gaming",
             icone:"bx bx-joystick-alt",
-            image:"./images/Category-Gamepad.png"
+            image:"images/Category-Gamepad.png"
         },
         
     ]
