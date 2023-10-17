@@ -10,28 +10,27 @@ function NavBar(){
     }
     const ToggleNav = ()=>{
         setIsNavVisible(!isNavVisible);
+        document.body.style.overflow = isNavVisible? 'auto' : 'hidden';
     }
-    // const [currentPage, setCurrentPage] = useState('/');
-    
     const location = useLocation();
     const currentPage = location.pathname;
     return(
         <>
-            <nav id="topBar">
+            <nav id="topBar" style={isNavVisible?{position:"sticky",top:0}:{}}>
                 <i className="bx bx-menu" onClick={ToggleNav} id="humberger"/>
                 <Link to='/'><h2 className={isSearchVisible?'hide-nav-items':''}>Execlusive</h2></Link>
                 <ul id="ulNav" className={isNavVisible?'show':''}>
                     <li>
-                        <Link to='/' className={currentPage==='/'?'clicked':''}>Home</Link>
+                        <Link to='/' className={currentPage==='/'?'clicked':''} onClick={()=>setIsNavVisible(false)}>Home</Link>
                     </li>
                     <li>
-                        <Link to='/contact' className={currentPage==='/contact'?'clicked':''}>Contact</Link>
+                        <Link to='/contact' className={currentPage==='/contact'?'clicked':''} onClick={()=>setIsNavVisible(false)}>Contact</Link>
                     </li>
                     <li>
-                        <Link to='/about' className={currentPage==='/about'?'clicked':''}>About</Link>
+                        <Link to='/about' className={currentPage==='/about'?'clicked':''} onClick={()=>setIsNavVisible(false)}>About</Link>
                     </li>
                     <li>
-                        <Link to='/sign-up' className={currentPage==='/sign-up'?'clicked':''}>Sign Up</Link>
+                        <Link to='/sign-up' className={currentPage==='/sign-up'?'clicked':''} onClick={()=>setIsNavVisible(false)}>Sign Up</Link>
                     </li>
                     
                 </ul>
