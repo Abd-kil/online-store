@@ -58,6 +58,7 @@
     #topBar ul {
         display: flex;
         position: absolute;
+        z-index: 2;
         top: 50vh;
         height: 0;
         width: 100%;
