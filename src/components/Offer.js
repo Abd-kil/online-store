@@ -1,5 +1,4 @@
 import "../css/offer.css";
-import speacker from "../images/Frame 694.png";
 import Timer from "./Timer";
 function Offer(props){
     return(
@@ -16,7 +15,7 @@ function Offer(props){
                 <button>Buy Now</button>
             </div>
             <div className="offer-right">
-                <img src={speacker} alt="speacker"/>
+                <img src={props.img} alt="speacker"/>
             </div>
         </div>
         </section>

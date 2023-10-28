@@ -1,5 +1,6 @@
 .section-title{
     display: flex;
+    margin-bottom: 20px;
 }
 .productsSection{
     margin: 40px auto;

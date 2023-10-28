@@ -10,6 +10,11 @@ import Computer from "../images/Category-Computer.png";
 import Gamepad from "../images/Category-Gamepad.png";
 import Headphone from "../images/Category-Headphone.png";
 import SmartWatch from "../images/Category-SmartWatch.png";
+import PS5 from "../images/ps5.png";
+import speacker from "../images/Frame 694.png";
+import clipart from "../images/clipart-speacker.png";
+import gucci from "../images/gucci.png";
+import Advert from "../components/Advert";
 function Home(){
     const content = [];
     for(let i=0;i<20;i++){
@@ -97,6 +102,7 @@ function Home(){
                     month:10,
                     year:2023
                 }}
+                img={speacker}
             />
             <ProductsSection
                 redTitle="Our Products"
@@ -105,6 +111,44 @@ function Home(){
                 content={content}
                 towRows
             />
+            <hr/>
+            <ProductsSection
+                redTitle="featured"
+                title="New Arrived"
+                content={
+                    <div style={{display:"flex",justifyContent:"space-between"}}>
+                    <Advert
+                        title="playstation 5"
+                        details="Black and White version of the PS5 coming out on sale"
+                        image={PS5}
+                        size="vertical"
+                        />
+                    <div className="adverts-group">
+                        <Advert
+                            title="Altra speacker"
+                            details="enhance your music experience"
+                            image={speacker}
+                            size="horizontal"
+                        />
+                        <div className="flex-section">
+                        <Advert
+                            title="speackers"
+                            details="amazon wirless speackers"
+                            image={clipart}
+                            size="small"
+                            />
+                        <Advert
+                            title="perfume"
+                            details="GUCCI INTENSE OUD EDP"
+                            image={gucci}
+                            size="small"
+                            />
+                        </div>
+                    </div>
+                    </div>
+                }
+            />
+            
         </div>
     );
 }

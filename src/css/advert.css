@@ -1,0 +1,65 @@
+.advert{
+    background: #000;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.advert img{
+    width: 75%;
+}
+
+.advert .text-container{
+    position: absolute;
+    bottom: 7vmin;
+    left: 5vmin;
+    max-width: 15em;
+}
+
+.advert h3{
+    font-size: 1.7vw;
+    text-transform: capitalize;
+    margin: 0;
+    font-weight: 600;
+}
+
+.advert p{
+    font-size: 1.2vw;
+    margin: 5px 0;
+}
+
+.advert a{
+    font-size: 1.2vw;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.vertical{
+    width: 48%;
+    padding-top: 50px;
+}
+
+.horizontal{
+    height: 50%;
+    margin-bottom: 20px;
+    align-items: center;
+}
+.horizontal img{
+    width: 45%;
+}
+
+.small{
+    width: 47.5%;
+    justify-content: center;
+    align-items: center;
+}
+.small img{
+    width: 50%;
+}
+.small .text-container , .horizontal .text-container{
+    bottom: 4vmin;
+    left: 3vmin;
+}
