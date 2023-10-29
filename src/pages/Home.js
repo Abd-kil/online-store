@@ -67,7 +67,7 @@ function Home(){
                 title="Flash sales"
                 time={{
                     day:18,
-                    month:10,
+                    month:11,
                     year:2023
                 }}
                 content={content}
@@ -99,7 +99,7 @@ function Home(){
             <Offer
                 time={{
                     day:20,
-                    month:10,
+                    month:11,
                     year:2023
                 }}
                 img={speacker}
@@ -116,7 +116,7 @@ function Home(){
                 redTitle="featured"
                 title="New Arrived"
                 content={
-                    <div style={{display:"flex",justifyContent:"space-between"}}>
+                    <div className="adverts-section">
                     <Advert
                         title="playstation 5"
                         details="Black and White version of the PS5 coming out on sale"

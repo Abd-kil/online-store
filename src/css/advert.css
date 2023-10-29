@@ -63,3 +63,10 @@
     bottom: 4vmin;
     left: 3vmin;
 }
+
+@media (max-width:720px) {
+    .vertical{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

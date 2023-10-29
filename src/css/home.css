@@ -58,6 +58,10 @@
 .images-container{
     width: 60%;
 }
+.adverts-section{
+    display: flex;
+    justify-content: space-between;
+}
 .adverts-group{
     display: flex;
     flex-direction: column;
@@ -74,6 +78,15 @@ section{
 hr{
     width: 80%;
     margin:40px auto;
+}
+
+@media (max-width:720px) {
+    .adverts-section{
+        flex-direction: column;
+    }
+    .adverts-group{
+        width: 100%;
+    }
 }
 
 @media (max-width:500px) {
