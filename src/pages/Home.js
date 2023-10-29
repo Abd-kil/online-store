@@ -15,6 +15,7 @@ import speacker from "../images/Frame 694.png";
 import clipart from "../images/clipart-speacker.png";
 import gucci from "../images/gucci.png";
 import Advert from "../components/Advert";
+import Advantage from "../components/Advantage";
 function Home(){
     const content = [];
     for(let i=0;i<20;i++){
@@ -148,7 +149,23 @@ function Home(){
                     </div>
                 }
             />
-            
+            <div className="advantages">
+                <Advantage
+                    icone="bx bxs-truck"
+                    title="free and fast delivery"
+                    text="Free delivery for all orders over 140$"
+                />
+                <Advantage
+                    icone="bx bx-headphone"
+                    title="24/7 customer service"
+                    text="Friendly 24/7 customer support"
+                />
+                <Advantage
+                    icone="bx bx-check-shield"
+                    title="money back guarantee"
+                    text="We retun money within 30 days"
+                />
+            </div>
         </div>
     );
 }

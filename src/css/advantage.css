@@ -1,0 +1,29 @@
+.advantage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.advantage .icone-container{
+    background: #000;
+    color: #fff;
+    height: 60px;
+    width: 60px;
+    border: 8px solid #aaa;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.advantage h4{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.advantage p{
+    font-size: small;
+}
