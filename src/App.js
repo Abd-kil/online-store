@@ -1,10 +1,11 @@
-import { BrowserRouter as Router, HashRouter, Routes, Route } from 'react-router-dom';
+import {HashRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
 import Cart from './pages/Cart';
 import Contact from './pages/Contact';
 import NoPage from './pages/NoPage';
 import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 function App() {
   return (
     <HashRouter basename='/'>
@@ -15,6 +16,7 @@ function App() {
         <Route path="/contact" element={<Contact/>}/>
         <Route path="*" element={<NoPage/>}/>
       </Routes>
+    <Footer/>
     </HashRouter>
   );
 }

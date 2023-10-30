@@ -3,7 +3,7 @@ function Advantage(props){
     return(
         <div className="advantage">
             <div className="icone-container">
-                <h1 className={props.icone}/>
+                <h1 className={props.icone}></h1>
             </div>
             <div>
                 <h4>{props.title}</h4>

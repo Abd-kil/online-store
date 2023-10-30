@@ -1,0 +1,57 @@
+.footer{
+    position: relative;
+    padding-bottom: 50px;
+    display: flex;
+    background: #000;
+    color: #fff;
+    justify-content: space-around;
+}
+
+.footer ul{
+    list-style: none;
+    line-height: 1.7em;
+}
+
+.footer .copy-right{
+    position: absolute;
+    bottom: 20px;
+    color: #888;
+}
+
+.footer h4{
+    text-transform: capitalize;
+    font-size: medium;
+    font-weight: 400;
+    margin:0.5em 0;
+    color: #fff;
+}
+
+.footer li{
+    font-size: small;
+    color: #ddd;
+}
+
+.footer a{
+    color: #ddd;
+    text-decoration: none;
+}
+
+.footer a:hover{
+    text-decoration: underline;
+}
+
+.footer form{
+    background: #000;
+    border: 1px #fff solid;
+    border-radius: 3px;
+    margin-top: 10px;
+    display: flex;
+}
+
+.footer form :where(input , button){
+    padding: 7px;
+    border: none;
+    background: transparent;
+    color: #fff;
+    outline: none;
+}
