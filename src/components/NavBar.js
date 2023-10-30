@@ -1,35 +1,50 @@
 import { Link, useLocation } from "react-router-dom";
 import '../css/navBar.css'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SearchBar from "./SearchBar";
 function NavBar(){
-    const [isNavVisible,setIsNavVisible] = useState(false);
-    const [isSearchVisible,setIsSearchVisible] = useState(false);
+    const [isNavOpened,setIsNavOpened] = useState(false); //for mobile version
+    document.body.style.overflow = isNavOpened? 'hidden' : 'auto';
+    const [isSearchVisible,setIsSearchVisible] = useState(false); //for mobile version
     const toggleSearch = () => {
         setIsSearchVisible(!isSearchVisible);
     }
     const ToggleNav = ()=>{
-        setIsNavVisible(!isNavVisible);
-        document.body.style.overflow = isNavVisible? 'auto' : 'hidden';
+        setIsNavOpened(!isNavOpened);
     }
+
+    // show nav on scroll up
+    const [isNavVisible,setIsNavVisisble] = useState(true);
+    const [prevScrollPosition,setPrevScrollPosition] = useState(0);
+    const handlScroll = ()=>{
+        const currentScrollPosition = window.pageYOffset;
+        if(currentScrollPosition - prevScrollPosition > 10) setIsNavVisisble(false)
+        else if(currentScrollPosition - prevScrollPosition < -10) setIsNavVisisble(true);
+        setPrevScrollPosition(currentScrollPosition);
+    }
+    useEffect(()=>{
+        window.addEventListener("scroll",handlScroll);
+        return ()=> window.removeEventListener("scroll",handlScroll);
+    },[prevScrollPosition]);
+
     const location = useLocation();
     const currentPage = location.pathname;
     return(
-        <nav id="topBar" style={isNavVisible?{position:"sticky",top:0}:{}}>
+        <nav id="topBar" style={(isNavOpened || isNavVisible)?{top:"0"}:{top:"-20vh"}}>
             <i className="bx bx-menu" onClick={ToggleNav} id="humberger"/>
             <Link to='/'><h2 className={isSearchVisible?'hide-nav-items':''}>Execlusive</h2></Link>
-            <ul id="ulNav" className={isNavVisible?'show':''}>
+            <ul id="ulNav" className={isNavOpened?'show':''}>
                 <li>
-                    <Link to='/' className={currentPage==='/'?'clicked':''} onClick={()=>setIsNavVisible(false)}>Home</Link>
+                    <Link to='/' className={currentPage==='/'?'clicked':''} onClick={()=>setIsNavOpened(false)}>Home</Link>
                 </li>
                 <li>
-                    <Link to='/contact' className={currentPage==='/contact'?'clicked':''} onClick={()=>setIsNavVisible(false)}>Contact</Link>
+                    <Link to='/contact' className={currentPage==='/contact'?'clicked':''} onClick={()=>setIsNavOpened(false)}>Contact</Link>
                 </li>
                 <li>
-                    <Link to='/about' className={currentPage==='/about'?'clicked':''} onClick={()=>setIsNavVisible(false)}>About</Link>
+                    <Link to='/about' className={currentPage==='/about'?'clicked':''} onClick={()=>setIsNavOpened(false)}>About</Link>
                 </li>
                 <li>
-                    <Link to='/sign-up' className={currentPage==='/sign-up'?'clicked':''} onClick={()=>setIsNavVisible(false)}>Sign Up</Link>
+                    <Link to='/sign-up' className={currentPage==='/sign-up'?'clicked':''} onClick={()=>setIsNavOpened(false)}>Sign Up</Link>
                 </li>
                 
             </ul>

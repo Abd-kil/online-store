@@ -8,16 +8,20 @@ import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 function App() {
   return (
-    <HashRouter basename='/'>
-    <NavBar/>
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path="/cart" element={<Cart/>}/>
-        <Route path="/contact" element={<Contact/>}/>
-        <Route path="*" element={<NoPage/>}/>
-      </Routes>
-    <Footer/>
-    </HashRouter>
+    <div className='App'>
+      <HashRouter basename='/'>
+        <NavBar/>
+        <div className='page-content'>
+          <Routes>
+            <Route path='/' element={<Home/>}/>
+            <Route path="/cart" element={<Cart/>}/>
+            <Route path="/contact" element={<Contact/>}/>
+            <Route path="*" element={<NoPage/>}/>
+          </Routes>
+        </div> 
+        <Footer/>
+      </HashRouter>
+    </div>
   );
 }
 
