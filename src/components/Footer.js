@@ -16,7 +16,7 @@ function Footer(){
                 <li><h4>Account</h4></li>
                 <li><Link>My Account</Link></li>
                 <li><Link to="/cart">Cart</Link></li>
-                <li><Link to="/wishlist">Wishlist</Link></li>
+                <li><Link to="/wish-list">Wishlist</Link></li>
                 <li><Link to="/">Shop</Link></li>
             </ul>
             <ul>
