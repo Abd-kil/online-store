@@ -10,12 +10,15 @@
 .footer ul{
     list-style: none;
     line-height: 1.7em;
+    padding-inline-start: 0;
 }
 
 .footer .copy-right{
     position: absolute;
     bottom: 20px;
     color: #888;
+    width: 100%;
+    text-align: center;
 }
 
 .footer h4{
@@ -54,4 +57,11 @@
     background: transparent;
     color: #fff;
     outline: none;
+}
+
+@media (max-width:720px) {
+    .footer{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
 }

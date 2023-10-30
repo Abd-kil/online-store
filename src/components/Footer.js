@@ -13,18 +13,18 @@ function Footer(){
                 </form>
             </ul>
             <ul>
-                <li><h4>Developed By</h4></li>
-                <li>Abdulrahman Alkilani</li>
-                <li>abood.kil2003123@gmail.com</li>
-                <li><Link to="https://github.com/Abd-kil">My Github</Link></li>
-                <li>+963991091158</li>
-            </ul>
-            <ul>
                 <li><h4>Account</h4></li>
                 <li><Link>My Account</Link></li>
                 <li><Link to="/cart">Cart</Link></li>
                 <li><Link to="/wishlist">Wishlist</Link></li>
                 <li><Link to="/">Shop</Link></li>
+            </ul>
+            <ul>
+                <li><h4>Developed By</h4></li>
+                <li>Abdulrahman Alkilani</li>
+                <li>abood.kil2003123@gmail.com</li>
+                <li><Link to="https://github.com/Abd-kil">My Github</Link></li>
+                <li>+963991091158</li>
             </ul>
             <ul>
                 <li><h4>Quick Link</h4></li>
