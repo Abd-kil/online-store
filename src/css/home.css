@@ -5,22 +5,6 @@
     flex-wrap: wrap; */
 }
 
-.product{
-    position: relative;
-    z-index: 1;
-    margin: 10px 20px 10px 0;
-    padding: 10px;
-    min-width: 200px;
-    width: fit-content;
-    height: fit-content;
-    background: #fff;
-    text-align: left;
-}
-
-.product *{
-    margin: 5px 0;
-}
-
 .category{
     border:1.5px solid #555;
     border-radius:10px;

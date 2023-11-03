@@ -3,6 +3,7 @@ import './App.css';
 import Home from './pages/Home';
 import Cart from './pages/Cart';
 import Contact from './pages/Contact';
+import WishList from './pages/WishList';
 import NoPage from './pages/NoPage';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
@@ -16,6 +17,7 @@ function App() {
             <Route path='/' element={<Home/>}/>
             <Route path="/cart" element={<Cart/>}/>
             <Route path="/contact" element={<Contact/>}/>
+            <Route path="/wish-list" element={<WishList/>}/>
             <Route path="*" element={<NoPage/>}/>
           </Routes>
         </div> 

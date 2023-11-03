@@ -19,7 +19,7 @@ import Advantage from "../components/Advantage";
 function Home(){
     const content = [];
     for(let i=0;i<20;i++){
-        content.push(<Product/>)
+        content.push(<Product hideCartButton/>)
     }
     const categories = [
         {

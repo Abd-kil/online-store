@@ -1,26 +1,21 @@
 import logo from '../logo.svg';
-function Product(){
+import '../css/product.css';
+function Product(props){
     let rate = 4;
+    
     return(
         <div className='product'>
-            <div style={{background:'#eee'}}>
-                <div style={{
-                    position:'absolute',
-                    top:'15px',
-                    right:'15px',
-                    width:'fit-content'
-                }}>
-                    <button className='bx bx-heart' style={{
-                        fontSize:'large',
-                        background:'white',
-                        borderRadius:'50%',
-                        width:'fit-content',
-                        padding:'3px',
-                        border:'none',
-                        cursor:'pointer'
-                        }}></button>
+            <div className='product-div'>
+                <div className='wishlist-button-container'>
+                    <button className={'wishlist-button bx ' + (props.wishlist?'bx-trash':'bx-heart')}></button>
                 </div>
                 <img src={logo} alt='react'/>
+                {props.hideCartButton?
+                null:
+                <button className='cart-button'>
+                    <i className='bx bx-cart-alt'/> Add to cart
+                </button>
+                }
             </div>
             <h4>React component</h4>
             <h5 style={{fontWeight:'normal'}}>$ 399</h5>
