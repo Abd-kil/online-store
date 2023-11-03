@@ -1,0 +1,23 @@
+.center{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.space-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+}
+
+.red-button{
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    width: 150px;
+    height: 30px;
+    padding: initial;
+    cursor: pointer;
+}

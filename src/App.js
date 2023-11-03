@@ -1,5 +1,6 @@
 import {HashRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
+import './css/index.css';
 import Home from './pages/Home';
 import Cart from './pages/Cart';
 import Contact from './pages/Contact';
