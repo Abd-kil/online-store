@@ -8,8 +8,8 @@ function About(){
                 <div className="about-text">
                     <h1>Our Story</h1>
                     <p>
-                        Launced in 2015, Exclusive is South Asia’s premier online shopping 
-                        makterplace with an active presense in Bangladesh. 
+                        Launced in 2015, Exclusive is Middle East's premier online shopping 
+                        makterplace with an active presense in Syria. 
                         Supported by wide range of tailored marketing, data and service solutions, 
                         Exclusive has 10,500 sallers and 300 brands and serves 3 millioons customers across the region.
                     </p>
@@ -24,7 +24,7 @@ function About(){
                 <Advantage
                     icone="bx bx-store"
                     title="10.4K"
-                    text="sallers active our site"
+                    text="sallers active in our site"
                     titleFontSize={22}
                 />
                 <Advantage
@@ -36,7 +36,7 @@ function About(){
                 <Advantage
                     icone="bx bx-dollar"
                     title="25K"
-                    text="anual gross sale our site"
+                    text="anual gross sale in our site"
                     titleFontSize={22}
                 />
             </div>

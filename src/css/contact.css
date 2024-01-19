@@ -1,0 +1,71 @@
+.contact{
+    display: flex;
+    padding: 30px;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.contact .contact-message .information input {
+    border: none;
+    background: #eee;
+    padding: 10px;
+    border-radius: 5px;
+    min-width: 130px;
+    flex: 1;
+    outline: none;
+}
+.contact .contact-message form textarea{
+    border: none;
+    background: #eee;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    resize: none;
+    width: -webkit-fill-available;
+    height: 30%;
+}
+
+.contact .contact-information, .contact .contact-message{
+    box-shadow: 1px 1px 7px 0 #ddd;
+    padding: 20px;
+    border-radius: 10px;
+}
+.contact .contact-information{
+    width: 30%;
+}
+
+.contact .contact-information h3{
+    font-weight: 500;
+}
+
+.contact .contact-information i{
+    padding: 5px;
+    background-color: #dd4444;
+    color: #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.contact .contact-message{
+    width: 70%;
+}
+
+.contact .contact-message div{
+    margin-bottom: 10px;
+}
+
+.contact .contact-message .information{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+@media (max-width:720px) {
+    .contact{
+        flex-direction: column;
+    }
+    .contact .contact-information , .contact .contact-message{
+        width: -webkit-fill-available;
+    }
+}
