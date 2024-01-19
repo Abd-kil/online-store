@@ -10,6 +10,7 @@ import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import SignUp from './pages/SignUp';
 import Login from './pages/Login';
+import About from './pages/About';
 function App() {
   return (
     <div className='App'>
@@ -18,11 +19,12 @@ function App() {
         <div className='page-content'>
           <Routes>
             <Route path='/' element={<Home/>}/>
-            <Route path="/cart" element={<Cart/>}/>
             <Route path="/contact" element={<Contact/>}/>
-            <Route path="/wish-list" element={<WishList/>}/>
+            <Route path='/about' element={<About/>}/>
             <Route path="/sign-up" element={<SignUp/>}/>
             <Route path="/login" element={<Login/>}/>
+            <Route path="/wish-list" element={<WishList/>}/>
+            <Route path="/cart" element={<Cart/>}/>
             <Route path="*" element={<NoPage/>}/>
           </Routes>
         </div> 

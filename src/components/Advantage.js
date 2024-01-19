@@ -6,8 +6,8 @@ function Advantage(props){
                 <h1 className={props.icone}></h1>
             </div>
             <div>
-                <h4>{props.title}</h4>
-                <p>{props.text}</p>
+                <h4 style={props.titleFontSize?{fontSize:props.titleFontSize}:null}>{props.title}</h4>
+                <p style={props.textFontSize?{fontSize:props.textFontSize}:null}>{props.text}</p>
             </div>
         </div>
     );
