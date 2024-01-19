@@ -17,9 +17,14 @@ import gucci from "../images/gucci.png";
 import Advert from "../components/Advert";
 import Advantage from "../components/Advantage";
 function Home(){
-    const content = [];
+    var content = [];
     for(let i=0;i<20;i++){
-        content.push(<Product hideCartButton/>)
+        content.push({
+            'name':'Sony Playstation 5',
+            'image':PS5,
+            'price':'939',
+            'rate':4
+        })
     }
     const categories = [
         {
@@ -68,10 +73,21 @@ function Home(){
                 title="Flash sales"
                 time={{
                     day:18,
-                    month:11,
-                    year:2023
+                    month:2,
+                    year:2024
                 }}
-                content={content}
+                content={
+                    content.map((p,index)=>(
+                        <Product
+                            key={index}
+                            name={p.name}
+                            image={p.image}
+                            price={p.price}
+                            rate={p.rate}
+                            hideCartButton
+                        />
+                    ))
+                }
                 buttonsBelow = {
                     <div style={{width:'100%',display:'flex',justifyContent:'center'}}>  
                         <button className="red-button">View All</button>
@@ -100,8 +116,8 @@ function Home(){
             <Offer
                 time={{
                     day:20,
-                    month:11,
-                    year:2023
+                    month:2,
+                    year:2024
                 }}
                 img={speacker}
             />
@@ -109,7 +125,18 @@ function Home(){
                 redTitle="Our Products"
                 title="Explore Our Products"
                 scrollable
-                content={content}
+                content={
+                    content.map((p,index)=>(
+                        <Product
+                            key={index}
+                            name={p.name}
+                            image={p.image}
+                            price={p.price}
+                            rate={p.rate}
+                            hideCartButton
+                        />
+                    ))
+                }
                 towRows
             />
             <hr/>

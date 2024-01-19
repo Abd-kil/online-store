@@ -1,14 +1,25 @@
 import Product from "../components/Product";
 import ProductsSection from "../components/ProductsSection";
+import PS5 from '../images/ps5.png'
 import '../css/wishList.css';
 function WishList(){
     const wishList = [];
     for(let i=0;i<6;i++){
-        wishList.push(<Product wishlist/>)
+        wishList.push({
+            'name':'Sony Playstation 5',
+            'image':PS5,
+            'price':'939',
+            'rate':4
+        })
     }
     const relative = [];
     for(let i=0;i<6;i++){
-        relative.push(<Product/>)
+        relative.push({
+            'name':'Sony Playstation 5',
+            'image':PS5,
+            'price':'939',
+            'rate':4
+        })
     }
     
     return(
@@ -17,14 +28,34 @@ function WishList(){
         <div className="wish-list">
             <h3>Wishlist ({wishList.length})</h3>
             <div className="content">
-            {wishList}
+            {
+                wishList.map((p,index)=>(
+                    <Product
+                        key={index}
+                        name={p.name}
+                        image={p.image}
+                        price={p.price}
+                        rate={p.rate}
+                        wishlist
+                    />
+                ))
+            }
             </div>
         </div>
         <ProductsSection
             redTitle="relative"
             title="just for you"
             scrollable
-            content={relative}
+            content={relative.map((p,index)=>(
+                <Product
+                    key={index}
+                    name={p.name}
+                    image={p.image}
+                    price={p.price}
+                    rate={p.rate}
+                    wishList
+                />
+            ))}
         />
         </>
     );

@@ -1,7 +1,6 @@
-import logo from '../logo.svg';
 import '../css/product.css';
 function Product(props){
-    let rate = 4;
+    let rate = props.rate;
     
     return(
         <div className='product'>
@@ -9,7 +8,7 @@ function Product(props){
                 <div className='wishlist-button-container'>
                     <button className={'wishlist-button bx ' + (props.wishlist?'bx-trash':'bx-heart')}></button>
                 </div>
-                <img src={logo} alt='react'/>
+                <img src={props.image} alt={props.name}/>
                 {props.hideCartButton?
                 null:
                 <button className='cart-button'>
@@ -17,8 +16,8 @@ function Product(props){
                 </button>
                 }
             </div>
-            <h4>React component</h4>
-            <h5 style={{fontWeight:'normal'}}>$ 399</h5>
+            <h4>{props.name}</h4>
+            <h5 style={{fontWeight:'normal'}}>$ {props.price}</h5>
             <div className="rate-box">
                 <i className='bx bxs-star' style={rate >= 1?{color:'orange'}:{color:'#ccc'}}></i>
                 <i className='bx bxs-star' style={rate >= 2?{color:'orange'}:{color:'#ccc'}}></i>

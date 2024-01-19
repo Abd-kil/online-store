@@ -25,12 +25,15 @@ function Cart(){
     return(
         <div className="cart">
             <table>
+                <thead>
                 <tr>
                     <td>product</td>
                     <td>price</td>
                     <td>quantity</td>
                     <td>subtotal</td>
                 </tr>
+                </thead>
+                <tbody>
                 {cartProducts.map((product,index)=>(
                     <tr key={index}>
                         <td>
@@ -53,6 +56,7 @@ function Cart(){
                         <td>${product.price * quantities[index]}</td>
                     </tr>
                 ))}
+                </tbody>
             </table>
 
             <div className='space-between buttons-container'>

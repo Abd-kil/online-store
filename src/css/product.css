@@ -4,7 +4,7 @@
     margin: 10px 20px 10px 0;
     padding: 10px;
     min-width: 200px;
-    width: fit-content;
+    width: min-content;
     height: fit-content;
     background: #fff;
     text-align: left;
@@ -17,6 +17,11 @@
 .product .product-div{
     position: relative;
     background: #eee;
+}
+
+.product .product-div img{
+    width: 100%;
+    object-fit: contain;
 }
 
 .wishlist-button-container{
