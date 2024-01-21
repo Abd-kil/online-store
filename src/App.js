@@ -11,10 +11,14 @@ import Footer from './components/Footer';
 import SignUp from './pages/SignUp';
 import Login from './pages/Login';
 import About from './pages/About';
+import CheckOut from './pages/CheckOut';
+import ScrollToTop from './ScrollToTop';
 function App() {
+  
   return (
     <div className='App'>
       <HashRouter basename='/'>
+        <ScrollToTop/>
         <NavBar/>
         <div className='page-content'>
           <Routes>
@@ -25,6 +29,7 @@ function App() {
             <Route path="/login" element={<Login/>}/>
             <Route path="/wish-list" element={<WishList/>}/>
             <Route path="/cart" element={<Cart/>}/>
+            <Route path="/check-out" element={<CheckOut/>}/>
             <Route path="*" element={<NoPage/>}/>
           </Routes>
         </div> 

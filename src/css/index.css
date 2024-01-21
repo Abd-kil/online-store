@@ -16,8 +16,14 @@
     color: #fff;
     border: none;
     border-radius: 3px;
-    width: 150px;
+    min-width: fit-content;
+    max-width: 150px;
+    width: -webkit-fill-available;
     height: 30px;
-    padding: initial;
     cursor: pointer;
+    text-decoration: none;
+}
+
+input[type=checkbox], input[type=radio]{
+    accent-color: #dd4444;
 }

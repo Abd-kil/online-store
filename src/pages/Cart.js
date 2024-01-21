@@ -2,6 +2,7 @@ import PS5 from '../images/ps5.png';
 import gucci from '../images/gucci.png';
 import '../css/cart.css';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 function Cart(){
     const cartProducts = [
         {
@@ -89,7 +90,9 @@ function Cart(){
                         
                     </div>
                     <div className='center'>
-                        <button className='red-button'>Process To Checkout</button>
+                        <Link to='../check-out' state={{cartProducts:cartProducts,quantities:quantities}}>
+                            <button className='red-button'>Process To Checkout</button>
+                        </Link>
                     </div>
                     
                 </div>
