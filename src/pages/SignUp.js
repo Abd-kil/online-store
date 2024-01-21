@@ -10,10 +10,10 @@ function SignUp(){
                 <form>
                     <h1>Create an account</h1>
                     <p>Enter your details below</p>
-                    <input type="text" placeholder="Username" name="username"/>
-                    <input type="email" placeholder="Email" name="email"/>
-                    <input type="password" placeholder="Password" name="password"/>
-                    <input type="password" placeholder="Repeat Password" name="repeat-password"/>
+                    <input type="text" placeholder="Username" name="username" required/>
+                    <input type="email" placeholder="Email" name="email" required/>
+                    <input type="password" placeholder="Password" name="password" required/>
+                    <input type="password" placeholder="confirm Password" name="confirm-password" required/>
                     <button type="submit" className="red-button">Create Account</button>
                     <button className="red-button google-sign-up">
                         <img src={googleLogo} width='15' height='15'/>

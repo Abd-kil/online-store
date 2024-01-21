@@ -10,8 +10,8 @@ function Login(){
                 <form>
                     <h1>Log in to Execlusive</h1>
                     <p>Enter your details below</p>
-                    <input type="text" placeholder="Email or Username" name="email"/>
-                    <input type="password" placeholder="Password" name="password"/>
+                    <input type="text" placeholder="Email or Username" name="email" required/>
+                    <input type="password" placeholder="Password" name="password" required/>
                     <button type="submit" className="red-button">Log in</button>
                 </form>
             </div>
