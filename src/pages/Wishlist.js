@@ -7,7 +7,7 @@ function WishList(){
     for(let i=0;i<6;i++){
         wishList.push({
             'name':'Sony Playstation 5',
-            'image':PS5,
+            'images':[PS5],
             'price':'939',
             'rate':4
         })
@@ -16,7 +16,7 @@ function WishList(){
     for(let i=0;i<6;i++){
         relative.push({
             'name':'Sony Playstation 5',
-            'image':PS5,
+            'images':[PS5],
             'price':'939',
             'rate':4
         })
@@ -32,10 +32,7 @@ function WishList(){
                 wishList.map((p,index)=>(
                     <Product
                         key={index}
-                        name={p.name}
-                        image={p.image}
-                        price={p.price}
-                        rate={p.rate}
+                        product={p}
                         wishlist
                     />
                 ))
@@ -49,10 +46,7 @@ function WishList(){
             content={relative.map((p,index)=>(
                 <Product
                     key={index}
-                    name={p.name}
-                    image={p.image}
-                    price={p.price}
-                    rate={p.rate}
+                    product={p}
                     wishList
                 />
             ))}

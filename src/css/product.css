@@ -2,16 +2,26 @@
 .product{
     z-index: 1;
     margin: 10px 20px 10px 0;
-    padding: 10px;
     min-width: 200px;
     width: min-content;
     height: fit-content;
     background: #fff;
     text-align: left;
+    transition: 0.15s;
 }
 
 .product *{
     margin: 5px 0;
+}
+
+.product a{
+    text-decoration: none;
+    padding: 10px;
+    color: unset;
+}
+
+.product:hover{
+    scale: 1.02;
 }
 
 .product .product-div{

@@ -13,6 +13,7 @@ import Login from './pages/Login';
 import About from './pages/About';
 import CheckOut from './pages/CheckOut';
 import ScrollToTop from './ScrollToTop';
+import ProductDetails from './pages/ProductDetails';
 function App() {
   
   return (
@@ -30,6 +31,7 @@ function App() {
             <Route path="/wish-list" element={<WishList/>}/>
             <Route path="/cart" element={<Cart/>}/>
             <Route path="/check-out" element={<CheckOut/>}/>
+            <Route path='/product-details' element={<ProductDetails/>}/>
             <Route path="*" element={<NoPage/>}/>
           </Routes>
         </div> 
