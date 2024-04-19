@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/online-store/static/css/main.83d099f9.css",
-    "main.js": "/online-store/static/js/main.8664207b.js",
+    "main.js": "/online-store/static/js/main.adb5c0c5.js",
     "static/js/787.0f9e4aa4.chunk.js": "/online-store/static/js/787.0f9e4aa4.chunk.js",
     "static/media/google-logo.png": "/online-store/static/media/google-logo.85948811cb56223e2ced.png",
     "static/media/Frame 694.png": "/online-store/static/media/Frame 694.e3736eee515ac856401a.png",
@@ -12,11 +12,11 @@
     "static/media/gucci.png": "/online-store/static/media/gucci.1b469476b6f90c20bd96.png",
     "index.html": "/online-store/index.html",
     "main.83d099f9.css.map": "/online-store/static/css/main.83d099f9.css.map",
-    "main.8664207b.js.map": "/online-store/static/js/main.8664207b.js.map",
+    "main.adb5c0c5.js.map": "/online-store/static/js/main.adb5c0c5.js.map",
     "787.0f9e4aa4.chunk.js.map": "/online-store/static/js/787.0f9e4aa4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.83d099f9.css",
-    "static/js/main.8664207b.js"
+    "static/js/main.adb5c0c5.js"
   ]
 }
