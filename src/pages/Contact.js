@@ -31,7 +31,7 @@ function Contact(){
                     </p>
                 </div>
             </div>
-            <div className="contact-message">
+            <div className="contact-message" onSubmit={e=>e.preventDefault()}>
                 <form>
                     <div className="information">
                         <input type="text" placeholder="Your Name" name="name"/>
@@ -43,7 +43,7 @@ function Contact(){
 
                         </textarea>
                     </div>
-                    <button className='red-button'>send message</button>
+                    <button className='red-button' type='submit'>send message</button>
                 </form>
             </div>
         </div>

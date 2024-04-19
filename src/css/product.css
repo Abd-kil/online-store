@@ -52,6 +52,10 @@
     cursor:pointer;
 }
 
+.wishlist-button:hover{
+    background: #db4444;
+}
+
 .cart-button{
     width: 100%;
     margin: 0;

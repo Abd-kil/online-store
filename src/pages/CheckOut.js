@@ -57,10 +57,10 @@ function CheckOut() {
                         <span>Total</span>
                         <span>${sum(state.cartProducts.map((p, index) => p.price * state.quantities[index]))}</span>
                     </div>
-                    <form>
+                    <form onSubmit={e => e.preventDefault()}>
                         <div className='space-between'>
                             <label>
-                                <input type='radio' name='pay-method' value='bank' />
+                                <input type='radio' name='pay-method' value='bank' required />
                                 Bank
                             </label>
                             <span style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
@@ -69,14 +69,19 @@ function CheckOut() {
                             </span>
                         </div>
                         <label>
-                            <input type='radio' name='pay-method' value='cash' />
+                            <input type='radio' name='pay-method' value='cash' required />
                             Cash on delivery
                         </label>
                         <div className='space-between'>
-                            <input type='text' name='coupon' placeholder='Coupon Code' style={{minWidth:100}}/>
-                            <button className='red-button'>Apply Coupon</button>
+                            <input type='text' name='coupon' placeholder='Coupon Code' style={{ minWidth: 100 }} />
+                            <button
+                                className='red-button'
+                                onClick={e => {
+                                    e.preventDefault();
+                                }}
+                            >Apply Coupon</button>
                         </div>
-                        <button className='red-button' type='submit'>Playce Order</button>
+                        <button className='red-button' type='submit'>Place Order</button>
                     </form>
                 </div>
             </div>

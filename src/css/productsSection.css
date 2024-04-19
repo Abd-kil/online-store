@@ -35,7 +35,7 @@
     color: orange;
 }
 .section-title h5{
-    color: red;
+    color: #db4444;
 }
 .arrows-box{
     width: 50%;
@@ -56,7 +56,7 @@
     width: 15px;
     margin-right: 20px;
     border-radius: 4px;
-    background-color: red;
+    background-color: #db4444;
 }
 .section-title button{
     margin: 10px 10px 10px 0;
