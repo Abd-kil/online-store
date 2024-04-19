@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import '../css/navBar.css'
 import { useEffect, useState } from "react";
 import SearchBar from "./SearchBar";
+import logo from '../images/logo.svg';
 function NavBar(){
     const [isNavOpened,setIsNavOpened] = useState(false); //for mobile version
     document.body.style.overflow = isNavOpened? 'hidden' : 'auto';
@@ -32,7 +33,10 @@ function NavBar(){
     return(
         <nav id="topBar" style={(isNavOpened || isNavVisible)?{top:"0"}:{top:"-20vh"}}>
             <i className="bx bx-menu" onClick={ToggleNav} id="humberger"/>
-            <Link to='/'><h2 className={isSearchVisible?'hide-nav-items':''}>Execlusive</h2></Link>
+            <Link to='/'>
+                {/* <h2 className={isSearchVisible?'hide-nav-items':''}>Execlusive</h2> */}
+                <img className={isSearchVisible?'hide-nav-items':''} src={logo} alt=""/>
+            </Link>
             <ul id="ulNav" className={isNavOpened?'show':''}>
                 <li>
                     <Link to='/' className={currentPage==='/'?'clicked':''} onClick={()=>setIsNavOpened(false)}>Home</Link>
