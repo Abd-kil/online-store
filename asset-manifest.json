@@ -1,21 +1,22 @@
 {
   "files": {
     "main.css": "/online-store/static/css/main.83d099f9.css",
-    "main.js": "/online-store/static/js/main.8f6e8032.js",
+    "main.js": "/online-store/static/js/main.bab771f7.js",
     "static/js/787.0f9e4aa4.chunk.js": "/online-store/static/js/787.0f9e4aa4.chunk.js",
     "static/media/google-logo.png": "/online-store/static/media/google-logo.85948811cb56223e2ced.png",
     "static/media/Frame 694.png": "/online-store/static/media/Frame 694.e3736eee515ac856401a.png",
     "static/media/Side Image.png": "/online-store/static/media/Side Image.0e3c61955117c3202745.png",
     "static/media/ps5.png": "/online-store/static/media/ps5.8de91cfb9e6828080571.png",
     "static/media/clipart-speacker.png": "/online-store/static/media/clipart-speacker.0f6f779bfd4d5bbc2e70.png",
+    "static/media/logo.svg": "/online-store/static/media/logo.e8529051f1869666b89938820c3d1544.svg",
     "static/media/gucci.png": "/online-store/static/media/gucci.1b469476b6f90c20bd96.png",
     "index.html": "/online-store/index.html",
     "main.83d099f9.css.map": "/online-store/static/css/main.83d099f9.css.map",
-    "main.8f6e8032.js.map": "/online-store/static/js/main.8f6e8032.js.map",
+    "main.bab771f7.js.map": "/online-store/static/js/main.bab771f7.js.map",
     "787.0f9e4aa4.chunk.js.map": "/online-store/static/js/787.0f9e4aa4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.83d099f9.css",
-    "static/js/main.8f6e8032.js"
+    "static/js/main.bab771f7.js"
   ]
 }
