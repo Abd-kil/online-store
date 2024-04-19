@@ -35,7 +35,7 @@ function NavBar(){
             <i className="bx bx-menu" onClick={ToggleNav} id="humberger"/>
             <Link to='/'>
                 {/* <h2 className={isSearchVisible?'hide-nav-items':''}>Execlusive</h2> */}
-                <img className={isSearchVisible?'hide-nav-items':''} src={logo} alt=""/>
+                <img className={isSearchVisible?'hide-nav-items':''} src={logo} alt="" width='130px'/>
             </Link>
             <ul id="ulNav" className={isNavOpened?'show':''}>
                 <li>
