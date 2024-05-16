@@ -14,9 +14,11 @@ import About from './pages/About';
 import CheckOut from './pages/CheckOut';
 import ScrollToTop from './ScrollToTop';
 import ProductDetails from './pages/ProductDetails';
+import { AuthProvider } from './context/AuthProvider';
 function App() {
   
   return (
+    <AuthProvider>
     <div className='App'>
       <HashRouter basename='/'>
         <ScrollToTop/>
@@ -38,6 +40,7 @@ function App() {
         <Footer/>
       </HashRouter>
     </div>
+    </AuthProvider>
   );
 }
 

@@ -1,9 +1,23 @@
 import { Link, useLocation } from "react-router-dom";
 import '../css/navBar.css'
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import SearchBar from "./SearchBar";
 import logo from '../images/logo.svg';
+import AuthContext from "../context/AuthProvider";
+import axios from "../api/axios";
 function NavBar(){
+    const {auth, setAuth} = useContext(AuthContext);
+    const logout = async ()=>{
+        try{
+            const response = await axios.post('logout');
+            if(response.data){
+                setAuth(null);
+            }
+        }
+        catch(error){
+            console.error(error);
+        }
+    }
     const [isNavOpened,setIsNavOpened] = useState(false); //for mobile version
     document.body.style.overflow = isNavOpened? 'hidden' : 'auto';
     const [isSearchVisible,setIsSearchVisible] = useState(false); //for mobile version
@@ -48,7 +62,11 @@ function NavBar(){
                     <Link to='/about' className={currentPage==='/about'?'clicked':''} onClick={()=>setIsNavOpened(false)}>About</Link>
                 </li>
                 <li>
-                    <Link to='/sign-up' className={currentPage==='/sign-up'?'clicked':''} onClick={()=>setIsNavOpened(false)}>Sign Up</Link>
+                    {
+                        auth
+                        ?<button onClick={logout}>Log out</button>
+                        :<Link to='/login' className={currentPage==='/login'?'clicked':''} onClick={()=>setIsNavOpened(false)}>Login</Link>
+                    }
                 </li>
                 
             </ul>
